@@ -56,7 +56,7 @@ const NAV_LINKS = [
   { href: "#reels", label: "Video Ads" },
   { href: "#static-ads", label: "Static Ads" },
   { href: "#funnels", label: "Funnels" },
-  { href: "#war-room", label: "Results" },
+  { href: "#war-room", label: "Media Buying" },
   { href: "#swipe-matrix", label: "Swipe File" },
   { href: "#creators", label: "Creators" },
 ];
@@ -774,7 +774,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* =========================================================
-          03. PAID MEDIA RESULTS & CAMPAIGN MANAGEMENT
+          04. MEDIA BUYING SYSTEM & SCALING FRAMEWORK
       ========================================================= */}
       <section
         id="war-room"
@@ -785,28 +785,27 @@ export default function PortfolioPage() {
             <div>
               <SectionEyebrow
                 icon={TrendingUp}
-                label="04 · META ADS PERFORMANCE & TRACKING"
+                label="04 · MEDIA BUYING & SCALING SYSTEM"
                 dark
               />
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                Campaign Results, Budget Scaling & Funnel Tracking
+                Campaign Structure, Scaling Rules & Attribution QA
               </h2>
             </div>
             <p className="text-sm text-zinc-400 max-w-md">
-              Clear rules for managing ad spend: scale winning 3.0x ROAS ad sets by
-              +30%, and pause underperforming ads early to protect budget.
+              Disciplined media buying system: isolate winning hooks in dynamic creative tests, scale 3.0x ROAS winners by +30%, and cut underperformers early.
             </p>
           </div>
 
-          {/* Campaign Ledger Table */}
+          {/* Campaign Architecture & Scaling Rules Table */}
           <div className="bg-zinc-900/90 border border-zinc-800 rounded-3xl overflow-hidden mb-10">
             <div className="px-6 py-4 border-b border-zinc-800 flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2 text-xs font-mono text-zinc-300">
                 <FileSpreadsheet className="w-4 h-4 text-emerald-400" />
-                <span>META ADS & SAMCART CAMPAIGN SUMMARY</span>
+                <span>META ADS CAMPAIGN ARCHITECTURE & DECISION RULES</span>
               </div>
               <span className="text-xs font-mono text-zinc-400">
-                7-Day Click Attribution + UTM Tracking
+                7-Day Click Attribution + Full-Funnel UTM Tracking
               </span>
             </div>
 
@@ -814,14 +813,12 @@ export default function PortfolioPage() {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-zinc-800 text-[11px] font-mono uppercase text-zinc-400 bg-zinc-950/50">
-                    <th className="py-3.5 px-6">Campaign / Ad Set</th>
-                    <th className="py-3.5 px-4">Daily Budget</th>
-                    <th className="py-3.5 px-4">Spend</th>
-                    <th className="py-3.5 px-4">Orders</th>
-                    <th className="py-3.5 px-4">Revenue</th>
-                    <th className="py-3.5 px-4">ROAS</th>
-                    <th className="py-3.5 px-4">Status</th>
-                    <th className="py-3.5 px-6">Action Taken</th>
+                    <th className="py-3.5 px-6">Campaign / Ad Set Layer</th>
+                    <th className="py-3.5 px-4">Creative Format</th>
+                    <th className="py-3.5 px-4">Audience</th>
+                    <th className="py-3.5 px-4">KPI Benchmark</th>
+                    <th className="py-3.5 px-4">Decision Rule</th>
+                    <th className="py-3.5 px-6">Optimization Action</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-zinc-800/80 text-sm">
@@ -834,26 +831,20 @@ export default function PortfolioPage() {
                         </div>
                       </td>
                       <td className="py-4 px-4 font-mono text-xs text-zinc-300">
-                        {row.budget}
+                        {row.format}
                       </td>
                       <td className="py-4 px-4 font-mono text-xs text-zinc-300">
-                        {row.spend}
+                        {row.targeting}
                       </td>
-                      <td className="py-4 px-4 font-mono text-xs text-zinc-300">
-                        {row.purchases}
-                      </td>
-                      <td className="py-4 px-4 font-mono text-xs font-semibold text-white">
-                        {row.revenue}
-                      </td>
-                      <td className="py-4 px-4 font-mono text-sm font-bold text-emerald-400">
-                        {row.roas}
+                      <td className="py-4 px-4 font-mono text-xs font-semibold text-emerald-400">
+                        {row.benchmark}
                       </td>
                       <td className="py-4 px-4">
                         <span
-                          className={`inline-block text-[11px] font-mono px-2.5 py-1 rounded-full ${
+                          className={`inline-block text-[11px] font-mono px-2.5 py-1 rounded-full whitespace-nowrap ${
                             row.status.includes("SCALING")
                               ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/30"
-                              : row.status.includes("MONITOR")
+                              : row.status.includes("HOLD")
                               ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
                               : "bg-rose-500/15 text-rose-300 border border-rose-500/30"
                           }`}
@@ -861,7 +852,7 @@ export default function PortfolioPage() {
                           {row.status}
                         </span>
                       </td>
-                      <td className="py-4 px-6 text-xs text-zinc-300 max-w-xs leading-relaxed">
+                      <td className="py-4 px-6 text-xs text-zinc-300 max-w-md leading-relaxed">
                         {row.ruleApplied}
                       </td>
                     </tr>

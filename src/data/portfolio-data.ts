@@ -49,12 +49,10 @@ export interface CampaignRecord {
   id: string;
   name: string;
   platform: string;
-  budget: string;
-  spend: string;
-  purchases: number;
-  revenue: string;
-  roas: string;
-  status: "SCALING (+30%)" | "MONITOR" | "PAUSED / KILLED";
+  format: string;
+  targeting: string;
+  benchmark: string;
+  status: "SCALING (+30%)" | "HOLD / OPTIMIZE" | "CUT / REALLOCATE";
   ruleApplied: string;
 }
 
@@ -90,7 +88,7 @@ export const HERO_PROFILE = {
     "Media buyer and creative strategist with a software engineering background. I plan and scale Meta ad campaigns, build hook-first video ads that lifted top-of-funnel reach 14x, and have developed 100+ sales funnels and advertorials across Funnelish and Shopify.",
   funnelPortfolioUrl: "https://markangelobautista.framer.website",
   metrics: [
-    { value: 3.0, suffix: "x", decimals: 1, label: "Winner Ad Set ROAS", detail: "$158.31 Spend → $475.00 Revenue" },
+    { value: 3.0, suffix: "x", decimals: 1, label: "Winner Ad Set ROAS", detail: "Meta Reels Cold Traffic Winner" },
     { value: 14, suffix: "x", decimals: 0, label: "Organic Reach Lift", detail: "Hook-First Short-Form Video Cuts" },
     { value: 100, suffix: "+", decimals: 0, label: "Funnels & Advertorials", detail: "Funnelish · Shopify · Custom Builds" },
     { value: 28, suffix: "+", decimals: 0, label: "Ad Creatives Produced", detail: "Multi-Format Static & Video Suites" },
@@ -255,8 +253,8 @@ export const REEL_SHOWCASE: ReelItem[] = [
     duration: "0:15",
     aspectRatio: "9:16",
     metrics: [
-      { label: "Ad Set ROAS", value: "3.0x", subtext: "$158.31 Spend → $475.00 Revenue" },
-      { label: "Scale Action", value: "+30% Budget", subtext: "Scaled from $50/day to $65/day" },
+      { label: "Ad Set ROAS", value: "3.0x", subtext: "Top-performing paid Meta angle" },
+      { label: "Scale Action", value: "+30% Rule", subtext: "Vertical budget scaling triggered" },
       { label: "Format", value: "Declarative B-Roll", subtext: "First-second hook + 2s CTA hold" },
     ],
     hookLine: "The lunchbox standoff. Every single day. There is no magic phrase, but there are words that help and words that make it worse.",
@@ -296,7 +294,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
     duration: "0:15",
     aspectRatio: "9:16",
     metrics: [
-      { label: "Organic Reach", value: "488+ YT / 200 FB", subtext: "Immediate top-of-funnel lift" },
+      { label: "Reach Lift", value: "14x Lift", subtext: "Immediate top-of-funnel breakout" },
       { label: "Hook Beat", value: "'Fine at school'", subtext: "Addresses restraint collapse" },
       { label: "Visual Scene", value: "Front Door 4PM", subtext: "Small shoes in golden hour light" },
     ],
@@ -548,39 +546,33 @@ export const FUNNEL_STEPS: FunnelStep[] = [
 export const CAMPAIGN_RECORDS: CampaignRecord[] = [
   {
     id: "camp-lunchtime",
-    name: "Calm Kit | Broad US 25-55 | Reel | Lunchtime",
+    name: "Winner Ad Set — Single-Angle Reel (Lunchbox Standoff)",
     platform: "Meta Ads (FB + IG Reels)",
-    budget: "$50/day → $65/day",
-    spend: "$158.31",
-    purchases: 4,
-    revenue: "$475.00",
-    roas: "3.00x",
+    format: "9:16 Hook-First Video",
+    targeting: "Broad US 25–55",
+    benchmark: "3.0x ROAS Target Hit",
     status: "SCALING (+30%)",
-    ruleApplied: "Hit 3.0x ROAS with $64+ cart buyers → Scaled daily budget by +30% from $50/day to $65/day.",
+    ruleApplied: "Cleared 2.5x ROAS scaling gate with strong order-bump take rate → Scaled daily budget vertically by +30%.",
   },
   {
     id: "camp-flexible",
-    name: "Calm Kit | Broad US 25-55 | Reel | Flexible",
+    name: "Creative Testing Ad Set — Multi-Hook Dynamic Reels",
     platform: "Meta Ads (Dynamic Creative)",
-    budget: "$65/day → $50/day",
-    spend: "$149.62",
-    purchases: 4,
-    revenue: "$145.00",
-    roas: "0.97x",
-    status: "MONITOR",
-    ruleApplied: "Landing page views and checkouts remained steady → Held for 1 grace cycle at $50/day before kill/keep decision.",
+    format: "4x 9:16 Video Variations",
+    targeting: "Broad US 25–55",
+    benchmark: "Strong thumbstop & checkout rate",
+    status: "HOLD / OPTIMIZE",
+    ruleApplied: "Healthy link CTR and checkout initiation → Held budget steady while isolating top-performing hook variations.",
   },
   {
     id: "camp-batch1-statics",
-    name: "Calm Kit | Batch 1 Static Image Ads (4 Angles)",
+    name: "Batch 1 Static Testing — 4-Angle Multi-Placement Suite",
     platform: "Meta Ads (Feed + Stories)",
-    budget: "Paused / Killed",
-    spend: "$182.40",
-    purchases: 1,
-    revenue: "$27.00",
-    roas: "0.15x",
-    status: "PAUSED / KILLED",
-    ruleApplied: "Cut underperforming static ads at our spend limit and shifted budget into hook-first video reels.",
+    format: "4:5, 1:1 & 9:16 Statics",
+    targeting: "Broad US 25–55",
+    benchmark: "Below CPA / ROAS gate",
+    status: "CUT / REALLOCATE",
+    ruleApplied: "Paused underperforming static placements at spend threshold and reallocated budget into winning 9:16 video reels.",
   },
 ];
 
