@@ -302,85 +302,188 @@ export default function PortfolioPage() {
       </section>
 
       {/* =========================================================
-          00. DIRECT-RESPONSE PRE-SELL LISTICLE (CLIENT CONVERSION)
+          00. DIRECT-RESPONSE PRE-SELL LISTICLE (EDITORIAL BENTO SHOWCASE)
       ========================================================= */}
       <section
         id="why-brands-stall"
-        className="py-24 bg-zinc-950 text-white bg-grid-dark border-t border-zinc-800"
+        className="py-24 bg-white border-t border-zinc-200/80"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
-              <span>THE FULL-STACK ACQUISITION ADVANTAGE</span>
+          {/* Editorial Listicle Header + Broken Agency vs Unified System Comparison */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-950 text-white text-xs font-mono uppercase tracking-widest">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+                <span>THE FULL-STACK ACQUISITION DIAGNOSTIC</span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-[1.08] text-zinc-950">
+                4 Reasons Most DTC Brands Bleed Margin on Meta{" "}
+                <span className="font-serif italic font-normal text-zinc-600">
+                  — And How I Fix All 4 Under One Roof.
+                </span>
+              </h2>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-[1.12] text-white mb-4">
-              4 Reasons Most DTC Brands Bleed Margin on Meta — And How I Fix All 4 Under One Roof.
-            </h2>
-            <p className="text-base text-zinc-300 leading-relaxed">
-              When you split media buying, ad creative, and funnel building across three disconnected freelancers, everyone blames each other when ROAS drops. Here is how I engineer the entire click-to-upsell system so every dollar of ad spend works harder:
-            </p>
+
+            <div className="lg:col-span-5 bg-zinc-50 border border-zinc-200/90 rounded-2xl p-5 space-y-3">
+              <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider">
+                <span className="text-rose-600 font-semibold">✗ 3 Disconnected Hires</span>
+                <span className="text-emerald-700 font-semibold">✓ 1 Unified Operator</span>
+              </div>
+              <p className="text-xs text-zinc-600 leading-relaxed">
+                When you split <strong className="text-zinc-900">media buying</strong>,{" "}
+                <strong className="text-zinc-900">ad creative</strong>, and{" "}
+                <strong className="text-zinc-900">funnel building</strong> across separate freelancers, everyone blames each other when ROAS drops. I engineer the entire click-to-upsell chain as one system:
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* 4 Editorial Listicle Chapters */}
+          <div className="space-y-6">
             {CLIENT_GROWTH_PILLARS.map((pillar) => (
               <div
                 key={pillar.num}
-                className="bg-zinc-900/90 border border-zinc-800 hover:border-zinc-600 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-colors"
+                className="group relative bg-[#FAFAFA] hover:bg-white border border-zinc-200/90 hover:border-zinc-950 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 shadow-sm hover:shadow-xl"
               >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-white text-zinc-950">
-                      {pillar.num}
-                    </span>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">
-                      {pillar.tag}
-                    </span>
-                  </div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  {/* Left 7 Cols: Editorial Number, Headline, Trap vs Fix Split, Proof */}
+                  <div className="lg:col-span-7 space-y-6">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-zinc-950 text-white font-mono text-xs font-bold">
+                        REASON #{pillar.num}
+                      </span>
+                      <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                        {pillar.tag}
+                      </span>
+                    </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 leading-snug">
-                    {pillar.title}
-                  </h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950 leading-tight">
+                      {pillar.title}
+                    </h3>
 
-                  {/* The Trap & Agitation */}
-                  <div className="bg-rose-950/30 border border-rose-500/25 rounded-2xl p-4 mb-4 space-y-1.5">
-                    <p className="text-xs font-semibold text-rose-300">
-                      {pillar.trap}
-                    </p>
-                    <p className="text-xs text-zinc-300 leading-relaxed">
-                      {pillar.agitate}
-                    </p>
-                  </div>
-
-                  {/* The Unfair Advantage */}
-                  <div className="bg-emerald-950/25 border border-emerald-500/25 rounded-2xl p-4 mb-5">
-                    <p className="text-xs text-emerald-200 leading-relaxed font-medium">
-                      {pillar.unfairAdvantage}
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 mb-6">
-                    {pillar.proofPoints.map((pt) => (
-                      <div
-                        key={pt}
-                        className="flex items-start gap-2.5 text-xs text-zinc-300 leading-relaxed"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-none mt-0.5" />
-                        <span>{pt}</span>
+                    {/* Side-by-Side Comparison: Why Brands Bleed vs How I Fix It */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div className="bg-white border border-zinc-200/90 rounded-2xl p-4">
+                        <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-rose-600 font-semibold mb-1.5">
+                          <span className="w-2 h-2 rounded-full bg-rose-500" />
+                          <span>{pillar.trapTitle}</span>
+                        </div>
+                        <p className="text-xs text-zinc-600 leading-relaxed">
+                          {pillar.trapDesc}
+                        </p>
                       </div>
-                    ))}
-                  </div>
-                </div>
 
-                <div className="pt-4 border-t border-zinc-800 flex items-center justify-between">
-                  <a
-                    href={pillar.jumpHref}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:text-emerald-400 transition-colors"
-                  >
-                    <span>{pillar.jumpLabel}</span>
-                  </a>
-                  <span className="text-[11px] font-mono text-zinc-500">
-                    PROVEN IN PRODUCTION
-                  </span>
+                      <div className="bg-zinc-950 text-white rounded-2xl p-4 shadow-sm">
+                        <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-1.5">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                          <span>{pillar.fixTitle}</span>
+                        </div>
+                        <p className="text-xs text-zinc-200 leading-relaxed">
+                          {pillar.fixDesc}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Bullet Proof Points + Jump Link */}
+                    <div className="pt-1 flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-t border-zinc-200/80">
+                      <div className="space-y-1.5 pt-3">
+                        {pillar.proofPoints.map((pt) => (
+                          <div
+                            key={pt}
+                            className="flex items-start gap-2 text-xs text-zinc-700"
+                          >
+                            <CheckCircle2 className="w-3.5 h-3.5 text-zinc-950 flex-none mt-0.5" />
+                            <span>{pt}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <a
+                        href={pillar.jumpHref}
+                        className="inline-flex items-center gap-1.5 bg-white group-hover:bg-zinc-950 text-zinc-950 group-hover:text-white border border-zinc-300 group-hover:border-zinc-950 px-4 py-2.5 rounded-xl text-xs font-mono font-semibold transition-all flex-none self-start sm:self-end"
+                      >
+                        <span>{pillar.jumpLabel}</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Right 5 Cols: Visual Evidence & Stat Showcase Card */}
+                  <div className="lg:col-span-5 bg-zinc-950 text-white rounded-2xl p-5 sm:p-6 border border-zinc-800 flex flex-col justify-between min-h-[290px]">
+                    {/* Top Metric Callout */}
+                    <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-800">
+                      <div>
+                        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400">
+                          VERIFIED IMPACT
+                        </div>
+                        <div className="text-xs text-zinc-300 font-medium mt-0.5">
+                          {pillar.statLabel}
+                        </div>
+                      </div>
+                      <div className="text-3xl sm:text-4xl font-mono font-bold text-emerald-400 tracking-tight">
+                        {pillar.statValue}
+                      </div>
+                    </div>
+
+                    {/* Visual Media Preview Based on Pillar Type */}
+                    {pillar.previewMedia.type === "images" && (
+                      <div className="grid grid-cols-3 gap-2.5 my-auto">
+                        {pillar.previewMedia.items.map((imgSrc, i) => (
+                          <div
+                            key={imgSrc}
+                            className="aspect-[4/5] rounded-xl overflow-hidden bg-zinc-900 border border-white/10"
+                          >
+                            <img
+                              src={imgSrc}
+                              alt={`${pillar.title} preview ${i + 1}`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {pillar.previewMedia.type === "ladder" && (
+                      <div className="space-y-2 my-auto">
+                        {pillar.previewMedia.items.map((stepText, idx) => (
+                          <div
+                            key={stepText}
+                            className="flex items-center justify-between px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-mono"
+                          >
+                            <span className="text-zinc-400">0{idx + 1}</span>
+                            <span className="text-white font-medium">
+                              {stepText}
+                            </span>
+                            <span className="text-emerald-400">✓</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {pillar.previewMedia.type === "rules" && (
+                      <div className="space-y-2 my-auto">
+                        {pillar.previewMedia.items.map((ruleText, idx) => (
+                          <div
+                            key={ruleText}
+                            className="px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-zinc-200 flex items-center gap-2.5"
+                          >
+                            <span
+                              className={`w-2 h-2 rounded-full flex-none ${
+                                idx === 0
+                                  ? "bg-emerald-400"
+                                  : idx === 1
+                                  ? "bg-amber-400"
+                                  : "bg-rose-400"
+                              }`}
+                            />
+                            <span className="truncate">{ruleText}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="pt-4 mt-4 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                      <span className="truncate">{pillar.previewMedia.caption}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

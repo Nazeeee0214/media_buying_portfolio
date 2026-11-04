@@ -98,10 +98,18 @@ export const HERO_PROFILE = {
 export interface GrowthPillar {
   num: string;
   tag: string;
+  statValue: string;
+  statLabel: string;
   title: string;
-  trap: string;
-  agitate: string;
-  unfairAdvantage: string;
+  trapTitle: string;
+  trapDesc: string;
+  fixTitle: string;
+  fixDesc: string;
+  previewMedia: {
+    type: "images" | "ladder" | "rules";
+    items: string[];
+    caption: string;
+  };
   proofPoints: string[];
   jumpHref: string;
   jumpLabel: string;
@@ -109,64 +117,121 @@ export interface GrowthPillar {
 
 export const CLIENT_GROWTH_PILLARS: GrowthPillar[] = [
   {
-    num: "REASON #1",
+    num: "01",
     tag: "THE 2-SECOND SCROLL TAX",
-    title: "Your Media Buying Isn't Broken—Your First 1.8 Seconds Are.",
-    trap: "The Trap: Most brands pay agencies thousands to tweak audiences while running slow, generic ads that lose 82% of viewers before the 2-second mark.",
-    agitate: "In post-Andromeda Meta Ads, the creative IS the targeting. If your opening frame doesn't call out a visceral daily flashpoint immediately, you're paying a 'boring ad tax' on every thousand impressions.",
-    unfairAdvantage: "Your Unfair Advantage: I build hook-first declarative video reels and code-driven React/Remotion ads where we can swap opening hooks and final 2-second CTAs in minutes—not weeks.",
+    statValue: "14x",
+    statLabel: "Reach & Thumbstop Lift",
+    title: "Your Media Buying Isn't Broken — Your First 1.8 Seconds Are.",
+    trapTitle: "Why Brands Bleed Here",
+    trapDesc:
+      "Paying agencies to tweak lookalike audiences while running slow, generic intros that lose 82% of viewers before the 2-second mark.",
+    fixTitle: "How I Fix It Under One Roof",
+    fixDesc:
+      "I script and build hook-first 9:16 reels and code-driven React/Remotion video ads where opening hooks and final 2-second CTAs swap in minutes.",
+    previewMedia: {
+      type: "images",
+      items: [
+        "/assets/stills/batch2_reel1_poster.png",
+        "/assets/stills/batch2_reel3_poster.png",
+        "/assets/stills/v2_beat1_hook.png",
+      ],
+      caption: "0.0s First-Frame Flashpoint Hooks + Modular 2s End-Cards",
+    },
     proofPoints: [
-      "14x organic & top-of-funnel reach lift by replacing slow intros with 0.0s flashpoint hooks",
+      "14x reach breakout by replacing slow intros with 0.0s daily flashpoint hooks",
       "8-second seamless loop reels engineered to force 2x watches (>100% completion)",
-      "Modular end-cards that route traffic to Paid Checkouts, ManyChat DMs, or Lead Magnets",
+      "Modular end-cards routing to Paid Checkouts, ManyChat DMs, or Lead Magnets",
     ],
     jumpHref: "#reels",
-    jumpLabel: "See The Hook-First Video Lab ↓",
+    jumpLabel: "Watch The Video Reels ↓",
   },
   {
-    num: "REASON #2",
-    tag: "THE SINGLE-PLACEMENT BOTTLENECK",
+    num: "02",
+    tag: "THE PLACEMENT BOTTLENECK",
+    statValue: "4×3",
+    statLabel: "Angle × Aspect Matrix",
     title: "Testing One Ad Format Starves Meta's Algorithm of Cheap Inventory.",
-    trap: "The Trap: Launching a single 1:1 image or a single video and hoping Meta finds buyers across Feed, Stories, and Reels.",
-    agitate: "When you only give Meta one aspect ratio or one emotional angle, you force the auction into overcrowded placements and burn out your winning creative in days.",
-    unfairAdvantage: "Your Unfair Advantage: Every angle I research in the Meta Ad Library is deployed as a full multi-placement static & video matrix (4:5 Feed, 1:1 Square, 9:16 Story) plus high-value product stack mockups.",
+    trapTitle: "Why Brands Bleed Here",
+    trapDesc:
+      "Launching a single 1:1 square image or one angle and forcing Meta into expensive auctions while creative fatigue sets in within days.",
+    fixTitle: "How I Fix It Under One Roof",
+    fixDesc:
+      "Every angle I reverse-engineer from the Meta Ad Library ships as a complete 4:5 Feed, 1:1 Square, and 9:16 Story suite plus tangible bundle mockups.",
+    previewMedia: {
+      type: "images",
+      items: [
+        "/assets/static-ads/1.webp",
+        "/assets/static-ads/B1-product-1.webp",
+        "/assets/static-ads/15.webp",
+      ],
+      caption: "Native 4:5, 1:1 & 9:16 Multi-Placement Static Creative Matrix",
+    },
     proofPoints: [
-      "4 distinct psychological angles tested simultaneously (Pain, Mechanism, Pattern, Identity)",
-      "Tangible 'print-tonight' bundle mockups that make digital & physical offers irresistible",
-      "Reverse-engineered from competitor ads proven to run profitably for 5–10+ months",
+      "4 distinct psychological angles tested per sprint (Pain, Mechanism, Pattern, Identity)",
+      "High-clarity device & bundle mockups that anchor perceived value at first glance",
+      "Built on competitor ad patterns proven active for 5–10+ months in Ad Library",
     ],
     jumpHref: "#static-ads",
-    jumpLabel: "Inspect The 28-Ad Static Matrix ↓",
+    jumpLabel: "Explore 28+ Static Ads ↓",
   },
   {
-    num: "REASON #3",
-    tag: "THE $27 FRONT-END DEATH SPIRAL",
+    num: "03",
+    tag: "THE $27 AOV DEATH SPIRAL",
+    statValue: "$475",
+    statLabel: "Max Full-Funnel Cart",
     title: "You Can't Scale Cold Traffic If Your Funnel Stops at the First Purchase.",
-    trap: "The Trap: Sending expensive Meta clicks to a standard product page where a $27 buyer checks out and leaves with a $27 cart.",
-    agitate: "At a $27 AOV, rising CPMs will eventually crush your ROAS. The brands scaling effortlessly on Meta aren't paying less for clicks—they're making 2x to 5x more per customer at checkout.",
-    unfairAdvantage: "Your Unfair Advantage: With 100+ Funnelish and Shopify funnels built, I engineer pre-sell listicles, dual one-checkbox order bumps (+$17 & +$37), and one-click upsells ($97 & $297) that turn a $27 front-end buyer into a $64–$475 cart.",
+    trapTitle: "Why Brands Bleed Here",
+    trapDesc:
+      "Sending expensive Meta clicks to a standard product page where a $27 buyer checks out and leaves with a $27 cart—crushing your ROAS.",
+    fixTitle: "How I Fix It Under One Roof",
+    fixDesc:
+      "Backed by 100+ Funnelish and Shopify builds, I engineer pre-sell listicles, dual one-checkbox order bumps (+$17 & +$37), and 1-click upsells ($97 & $297).",
+    previewMedia: {
+      type: "ladder",
+      items: [
+        "$27 Front-End Kit",
+        "+$17 / +$37 Order Bumps",
+        "+$97 1-Click Upsell 1",
+        "+$297 Flagship Upsell 2",
+      ],
+      caption: "17.5x Cart Expansion Architecture ($27 Entry → $475 Max Cart)",
+    },
     proofPoints: [
       "100+ high-converting Funnelish & Shopify advertorials, listicles, and checkouts shipped",
-      "Dual impulse order bumps that more than double initial front-end cart value ($27 → $64+)",
+      "Dual impulse order bumps that lift initial front-end checkout carts from $27 to $64+",
       "Zero-friction one-click post-purchase upsells that expand maximum cart value to $475",
     ],
     jumpHref: "#funnels",
-    jumpLabel: "See The $27 → $475 Funnel Ladder ↓",
+    jumpLabel: "See The Funnel Ladder ↓",
   },
   {
-    num: "REASON #4",
-    tag: "EMOTIONAL MEDIA BUYING & LEAKY PIXELS",
-    title: "Scaling on 'Gut Feel' Instead of Strict Kill / Hold / +30% Rules.",
-    trap: "The Trap: Letting losing ad sets bleed budget because 'the algorithm needs more time', or scaling winners too fast and resetting learning.",
-    agitate: "Combine emotional budget changes with unverified Pixel/CAPI events and zero cart-recovery flows, and you're flying blind while leaking 20–30% of warm checkouts.",
-    unfairAdvantage: "Your Unfair Advantage: I run ad accounts like a software engineer—strict CPA/ROAS kill gates, disciplined +30% vertical scaling on 3.0x ROAS winners, automated ManyChat/email recovery, and custom Python scripts for daily reporting.",
+    num: "04",
+    tag: "GUT-FEEL MEDIA BUYING",
+    statValue: "3.0x",
+    statLabel: "Winner Ad Set ROAS",
+    title: "Scaling on Emotion Instead of Strict Kill / Hold / +30% Rules.",
+    trapTitle: "Why Brands Bleed Here",
+    trapDesc:
+      "Letting losing ad sets bleed budget because 'the algorithm needs time', or scaling winners too aggressively alongside broken Pixel/CAPI tracking.",
+    fixTitle: "How I Fix It Under One Roof",
+    fixDesc:
+      "I run ad accounts like a software engineer—strict CPA kill gates, +30% vertical scaling on 3.0x ROAS winners, ManyChat/email recovery, and Python automation.",
+    previewMedia: {
+      type: "rules",
+      items: [
+        "SCALE (+30% Budget) → Cleared 2.5x–3.0x ROAS Gate",
+        "HOLD (Optimize) → Strong Thumbstop & Checkout Initiation",
+        "KILL (Reallocate) → Below CPA / ROAS Gate at Threshold",
+      ],
+      caption: "Algorithmic Decision Gates + Python Ad Library & Reporting Scripts",
+    },
     proofPoints: [
-      "Rule-based scaling: +30% budget increases only when ad sets clear ROAS & AOV gates",
-      "Automated ManyChat ('Comment Keyword') DM capture + 3-email abandoned cart recovery",
-      "Custom Python automation for Meta CSV reporting & Playwright Ad Library scraping",
+      "Disciplined +30% vertical budget scaling only when ROAS & AOV gates are cleared",
+      "Automated ManyChat ('Comment Keyword') DM capture + 3-email cart recovery",
+      "Custom Python scripts for Meta CSV reporting & Playwright Ad Library scraping",
     ],
     jumpHref: "#war-room",
-    jumpLabel: "Explore The Media Buying System ↓",
+    jumpLabel: "Inspect Media Buying Rules ↓",
   },
 ];
 
