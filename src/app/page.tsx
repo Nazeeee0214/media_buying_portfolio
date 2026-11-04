@@ -12,8 +12,6 @@ import {
   Code2,
   Layers,
   TrendingUp,
-  Monitor,
-  Smartphone,
   CheckCircle2,
   Sparkles,
   FileSpreadsheet,
@@ -55,12 +53,12 @@ const Hero3DStage = dynamic(() => import("@/components/three/Hero3DStage"), {
 });
 
 const NAV_LINKS = [
-  { href: "#reels", label: "01. Video Ads" },
-  { href: "#static-ads", label: "02. Static Ads" },
-  { href: "#funnels", label: "03. Funnels" },
-  { href: "#war-room", label: "04. Ad Results" },
-  { href: "#swipe-matrix", label: "05. Ad Research" },
-  { href: "#creators", label: "06. Creators" },
+  { href: "#reels", label: "Video Ads" },
+  { href: "#static-ads", label: "Static Ads" },
+  { href: "#funnels", label: "Funnels" },
+  { href: "#war-room", label: "Results" },
+  { href: "#swipe-matrix", label: "Swipe File" },
+  { href: "#creators", label: "Creators" },
 ];
 
 const STATIC_AD_FILTERS = [
@@ -122,9 +120,6 @@ export default function PortfolioPage() {
 
   // State: Active Funnel Step
   const [activeFunnelIdx, setActiveFunnelIdx] = useState(0);
-  const [iframeViewport, setIframeViewport] = useState<"desktop" | "mobile">(
-    "desktop"
-  );
 
   // State: Swipe File Filter
   const [swipeFilter, setSwipeFilter] = useState<
@@ -156,44 +151,49 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-zinc-950 bg-grid-minimal">
-      {/* Top Minimalist Sticky Navigation */}
-      <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-zinc-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-zinc-950 text-white font-mono text-xs font-bold flex items-center justify-center">
-              MB
-            </div>
-            <div>
-              <span className="font-semibold text-sm tracking-tight text-zinc-950 block leading-none">
+      {/* Top Minimalist Floating Pill Navigation */}
+      <header className="sticky top-0 z-50 pt-4 pb-2 px-4 sm:px-6 lg:px-8 pointer-events-none">
+        <div className="max-w-6xl mx-auto">
+          <div className="pointer-events-auto h-14 px-3 sm:px-4 rounded-full bg-white/85 backdrop-blur-xl border border-zinc-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between gap-4">
+            {/* Brand Identity */}
+            <a
+              href="#"
+              className="flex items-center gap-2.5 pl-1 pr-2 py-1 rounded-full hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/favicon.png"
+                alt={HERO_PROFILE.name}
+                className="w-8 h-8 rounded-full object-cover ring-1 ring-zinc-200 flex-none"
+              />
+              <span className="font-semibold text-sm tracking-tight text-zinc-950 whitespace-nowrap">
                 {HERO_PROFILE.name}
               </span>
-              <span className="font-mono text-[10px] text-zinc-500">
-                MEDIA BUYING · CREATIVE · FUNNELS
-              </span>
-            </div>
+            </a>
+
+            {/* Center Navigation Pills */}
+            <nav className="hidden lg:flex items-center gap-1 bg-zinc-100/80 p-1 rounded-full border border-zinc-200/60">
+              {NAV_LINKS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="px-3.5 py-1.5 rounded-full text-xs font-medium text-zinc-600 hover:text-zinc-950 hover:bg-white hover:shadow-sm transition-all whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Primary External Portfolio Action */}
+            <a
+              href={FUNNEL_PORTFOLIO_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 bg-zinc-950 text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-zinc-800 transition-colors whitespace-nowrap shadow-sm"
+            >
+              <span>Funnelish Portfolio</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
-
-          <nav className="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-zinc-600">
-            {NAV_LINKS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="hover:text-zinc-950 transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          <a
-            href={FUNNEL_PORTFOLIO_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 bg-zinc-950 text-white text-xs font-mono px-4 py-2 rounded-full hover:bg-zinc-800 transition-colors"
-          >
-            <span>Funnelish Portfolio</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </div>
       </header>
 
@@ -665,7 +665,7 @@ export default function PortfolioPage() {
               Looking for my full Funnelish & Shopify Funnel Portfolio?
             </h3>
             <p className="text-sm text-zinc-300 leading-relaxed">
-              Explore 100+ live high-converting landing pages, advertorials, and Shopify checkout integrations on my dedicated Funnel Builder portfolio, or test the interactive funnel prototypes below.
+              Explore 100+ live high-converting landing pages, advertorials, and Shopify checkout integrations on my dedicated Funnel Builder portfolio.
             </p>
           </div>
           <a
@@ -683,10 +683,10 @@ export default function PortfolioPage() {
           <div>
             <SectionEyebrow
               icon={Layers}
-              label="03 · DIRECT-RESPONSE FUNNEL CASE STUDY"
+              label="03 · DIRECT-RESPONSE FUNNEL ARCHITECTURE"
             />
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
-              Sales Page, Order Bumps & One-Click Upsell Prototypes
+              $27 Front-End Kit → Order Bumps → One-Click Upsells ($475 Max Cart)
             </h2>
           </div>
           <a
@@ -706,21 +706,28 @@ export default function PortfolioPage() {
           onSelectStep={setActiveFunnelIdx}
         />
 
-        {/* Selected Funnel Step Detail + Live Embedded Page Preview */}
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Funnel Step Specs */}
-          <div className="lg:col-span-4 bg-white border border-zinc-200/80 rounded-3xl p-6 shadow-sm space-y-5">
-            <div className="flex items-center justify-between">
+        {/* Selected Funnel Step Detail (No Embedded HTML Page Preview) */}
+        <div className="mt-8 bg-white border border-zinc-200/80 rounded-3xl p-6 sm:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100 aspect-[4/3] flex items-center justify-center">
+            <img
+              src={activeFunnel.mockupImage}
+              alt={activeFunnel.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="lg:col-span-7 space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-400">
                 {activeFunnel.stage}
               </span>
-              <span className="text-sm font-mono font-bold bg-zinc-950 text-white px-3 py-1 rounded-full">
+              <span className="text-sm font-mono font-bold bg-zinc-950 text-white px-3.5 py-1 rounded-full">
                 {activeFunnel.price}
               </span>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-zinc-950 mb-2">
+              <h3 className="text-2xl font-bold text-zinc-950 mb-2">
                 {activeFunnel.name}
               </h3>
               <p className="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg inline-block mb-3">
@@ -731,22 +738,14 @@ export default function PortfolioPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100">
-              <img
-                src={activeFunnel.mockupImage}
-                alt={activeFunnel.name}
-                className="w-full h-44 object-cover"
-              />
-            </div>
-
-            <div className="space-y-2 pt-2">
+            <div className="space-y-2.5 pt-1">
               <div className="text-xs font-mono uppercase text-zinc-400">
-                WHAT&apos;S INCLUDED:
+                FUNNEL MECHANICS & OFFER BREAKDOWN:
               </div>
               {activeFunnel.keyElements.map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-2.5 text-xs text-zinc-700 leading-relaxed"
+                  className="flex items-start gap-2.5 text-sm text-zinc-700 leading-relaxed"
                 >
                   <CheckCircle2 className="w-4 h-4 text-zinc-950 flex-none mt-0.5" />
                   <span>{item}</span>
@@ -754,82 +753,16 @@ export default function PortfolioPage() {
               ))}
             </div>
 
-            {/* Primary Fullscreen Prototype Link + Funnelish Portfolio Link */}
-            <div className="space-y-2 pt-2">
-              <a
-                href={activeFunnel.prototypeUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-zinc-950 text-white text-xs font-mono py-3 px-4 rounded-xl hover:bg-zinc-800 transition-colors"
-              >
-                <span>Open Fullscreen Page Preview</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+            <div className="pt-2">
               <a
                 href={FUNNEL_PORTFOLIO_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-zinc-100 text-zinc-800 border border-zinc-200 text-xs font-mono py-2.5 px-4 rounded-xl hover:bg-zinc-200 transition-colors"
+                className="inline-flex items-center gap-2 bg-zinc-950 text-white text-xs font-mono py-3 px-5 rounded-xl hover:bg-zinc-800 transition-colors"
               >
-                <span>More Funnels at markangelobautista.framer.website</span>
+                <span>View Live Funnelish & Shopify Builds at markangelobautista.framer.website</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-            </div>
-          </div>
-
-          {/* Live Interactive HTML Prototype Sandbox */}
-          <div className="lg:col-span-8 bg-zinc-900 rounded-3xl p-4 sm:p-6 border border-zinc-800 shadow-xl">
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-4 border-b border-zinc-800">
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="w-3 h-3 rounded-full bg-rose-500/80 flex-none" />
-                <span className="w-3 h-3 rounded-full bg-amber-400/80 flex-none" />
-                <span className="w-3 h-3 rounded-full bg-emerald-500/80 flex-none" />
-                <a
-                  href={activeFunnel.prototypeUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="ml-2 text-xs font-mono text-zinc-300 hover:text-white underline truncate max-w-[220px] sm:max-w-md inline-flex items-center gap-1"
-                >
-                  <span>{activeFunnel.name} (Interactive Preview)</span>
-                  <ExternalLink className="w-3 h-3 flex-none" />
-                </a>
-              </div>
-
-              <div className="flex items-center gap-1.5 bg-zinc-800 p-1 rounded-xl">
-                <button
-                  onClick={() => setIframeViewport("desktop")}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono transition-colors ${
-                    iframeViewport === "desktop"
-                      ? "bg-white text-zinc-950 font-semibold"
-                      : "text-zinc-400 hover:text-white"
-                  }`}
-                >
-                  <Monitor className="w-3.5 h-3.5" />
-                  <span>Desktop</span>
-                </button>
-                <button
-                  onClick={() => setIframeViewport("mobile")}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono transition-colors ${
-                    iframeViewport === "mobile"
-                      ? "bg-white text-zinc-950 font-semibold"
-                      : "text-zinc-400 hover:text-white"
-                  }`}
-                >
-                  <Smartphone className="w-3.5 h-3.5" />
-                  <span>Mobile (390px)</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="w-full bg-zinc-950 rounded-2xl overflow-hidden flex justify-center p-2">
-              <iframe
-                key={activeFunnel.prototypeUrl}
-                src={activeFunnel.prototypeUrl}
-                title={activeFunnel.name}
-                className={`h-[600px] bg-white rounded-xl transition-all duration-300 border border-zinc-700 ${
-                  iframeViewport === "mobile" ? "w-[390px]" : "w-full"
-                }`}
-              />
             </div>
           </div>
         </div>

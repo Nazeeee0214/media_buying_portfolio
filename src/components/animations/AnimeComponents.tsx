@@ -117,7 +117,7 @@ export function AnimeFunnelGraph({
         </div>
         <span className="inline-flex items-center gap-2 text-xs font-mono text-zinc-500 bg-zinc-100 px-3 py-1.5 rounded-full">
           <span className="w-2 h-2 rounded-full bg-zinc-900 animate-ping" />
-          Select a step below to interact with the live page build
+          Select a step below to view the offer & AOV breakdown
         </span>
       </div>
 
