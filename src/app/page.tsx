@@ -708,13 +708,18 @@ export default function PortfolioPage() {
 
         {/* Selected Funnel Step Detail (No Embedded HTML Page Preview) */}
         <div className="mt-8 bg-white border border-zinc-200/80 rounded-3xl p-6 sm:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100 aspect-[4/3] flex items-center justify-center">
+          <a
+            href={activeFunnel.mockupImage}
+            target="_blank"
+            rel="noreferrer"
+            className="lg:col-span-5 rounded-2xl overflow-hidden border border-zinc-200 bg-zinc-100 aspect-[4/3] p-3 flex items-center justify-center group"
+          >
             <img
               src={activeFunnel.mockupImage}
               alt={activeFunnel.name}
-              className="w-full h-full object-cover"
+              className="max-w-full max-h-full object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-300"
             />
-          </div>
+          </a>
 
           <div className="lg:col-span-7 space-y-5">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1021,15 +1026,12 @@ export default function PortfolioPage() {
                 label="06 · CREATOR OUTREACH & AFFILIATE PROGRAM"
               />
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
-                300+ Vetted Creators Across Zyla Kids & The Candid
+                Creator Partnership & Affiliate Outreach Systems
               </h2>
             </div>
-
-            <div className="flex items-center gap-4 bg-zinc-100 px-4 py-2.5 rounded-2xl border border-zinc-200/80 text-xs font-mono">
-              <span>Day-1 Reply Rate: <strong>13.3% (4/30)</strong></span>
-              <span>·</span>
-              <span>Offer: <strong>30% Commission</strong></span>
-            </div>
+            <p className="text-sm text-zinc-600 max-w-md">
+              Custom partner pitch sheets, automated creator vetting workflows, and affiliate outreach systems built for Zyla Kids and The Candid.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

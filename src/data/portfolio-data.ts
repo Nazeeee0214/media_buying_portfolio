@@ -93,7 +93,7 @@ export const HERO_PROFILE = {
     { value: 3.0, suffix: "x", decimals: 1, label: "Winner Ad Set ROAS", detail: "$158.31 Spend → $475.00 Revenue" },
     { value: 14, suffix: "x", decimals: 0, label: "Organic Reach Lift", detail: "Hook-First Short-Form Video Cuts" },
     { value: 100, suffix: "+", decimals: 0, label: "Funnels & Advertorials", detail: "Funnelish · Shopify · Custom Builds" },
-    { value: 300, suffix: "+", decimals: 0, label: "Creators Vetted & Pitched", detail: "13.3% Day-1 Response Rate" },
+    { value: 28, suffix: "+", decimals: 0, label: "Ad Creatives Produced", detail: "Multi-Format Static & Video Suites" },
   ],
 };
 
@@ -536,7 +536,7 @@ export const FUNNEL_STEPS: FunnelStep[] = [
     conversionRole: "Organic Reel Comment-to-DM Funnel",
     description:
       "One-page printable Fridge Poster delivered automatically via ManyChat when viewers comment 'CALM' on organic reels, feeding our Kit email sequence.",
-    mockupImage: "/assets/brand/mockups/p1_preview.png",
+    mockupImage: "/assets/brand/mockups/fridge_poster_preview.jpg",
     keyElements: [
       "Print-ready 8.5x11 page with 'Say This, Not This, Do This' sections",
       "Delivered automatically via ManyChat DM when users comment CALM",
@@ -732,21 +732,15 @@ export const SWIPE_CARDS: SwipeCard[] = [
 ];
 
 export const CREATOR_ENGINE_DATA = {
-  totalVetted: 300,
-  batchesPrepared: 10,
-  batch1Sent: 30,
-  day1Responses: 4,
-  responseRate: "13.3%",
-  commissionStructure: "30% Affiliate Commission",
   brandsCovered: [
     {
       name: "Zyla Kids",
       niche: "Sensory Parenting, Pediatric OT & Neurodiversity",
       partnerSheetImg: "/assets/partners/Zyla_Partner_Sheet.png",
       highlights: [
-        "Laura Petix (@theotbutterfly · 195K followers): Talent manager requested review access on Day 1 of outreach.",
-        "Afshan Tafler (Somatic Parenting Coach · 28K followers): Requested product access on Day 1.",
-        "Built 10 outreach batches (300 vetted creators) with verified emails and personalized pitch templates.",
+        "Designed the custom Zyla Kids Partner Sheet to present the product bundle and affiliate program clearly to parenting and OT creators.",
+        "Built organized creator outreach lists with verified contact details and personalized email pitch templates.",
+        "Set up product review access and affiliate onboarding workflows for creator partners.",
       ],
     },
     {
