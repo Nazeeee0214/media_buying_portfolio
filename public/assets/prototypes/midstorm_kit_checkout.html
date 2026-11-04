@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid‑Storm Kit Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-cream:#F5F1E8; --brand-sage:#2E6B5E; --text-dark:#222222; --text-muted:#555555; }
+        body{font-family:'Inter',sans-serif;background:var(--bg-cream);color:var(--text-dark);margin:0;padding:0;line-height:1.6;}
+        .container{max-width:760px;margin:0 auto;padding:40px 20px;background:#fff;box-shadow:0 4px 15px rgba(0,0,0,0.05);} 
+        h1,h2,h3{font-family:'Merriweather',serif;margin:0 0 20px;color:var(--text-dark);} 
+        h1{font-size:2.2rem;text-align:center;}
+        p{font-size:1.1rem;margin-bottom:20px;}
+        .subheadline{font-size:1.3rem;font-weight:600;text-align:center;margin-bottom:30px;}
+        .cta-btn{display:block;background:var(--brand-sage);color:#fff;text-align:center;font-size:1.2rem;font-weight:700;padding:18px 30px;border-radius:6px;margin:40px auto;max-width:80%;text-decoration:none;}
+        .cta-btn:hover{background:#224b42;}
+        .product-img{width:100%;max-width:400px;aspect-ratio:1/1;display:block;margin:0 auto 30px;object-fit:cover;border:2px solid var(--brand-sage);border-radius:8px;}
+        ul{list-style:none;padding:0;}
+        ul li{position:relative;padding-left:30px;margin-bottom:12px;}
+        ul li::before{content:"✓";position:absolute;left:0;color:var(--brand-sage);font-weight:bold;}
+        .benefit{background:var(--bg-cream);padding:1.5rem;border-radius:8px;margin-bottom:2rem;}
+        .bump,.upsell{background:var(--bg-cream);padding:20px;border-radius:8px;margin:30px 0;}
+        .trust-line{font-size:0.9rem;color:var(--text-muted);text-align:center;margin-top:-20px;}
+        footer{font-size:0.85rem;color:var(--text-muted);text-align:center;margin-top:60px;border-top:1px solid #eee;padding-top:30px;}
+        @media(max-width:600px){h1{font-size:2rem;}h2{font-size:1.5rem;}.cta-btn{width:100%;max-width:100%;font-size:1.3rem;padding:20px 24px;}.container{padding:20px 15px;}}
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- HEADLINE -->
+    <h1>27 things to say in the middle of a melt‑down. And the 9 things never to say.</h1>
+    <p style="font-weight:600;text-align:center;">The Mid‑Storm Kit, <strong>$27</strong>. A dollar a phrase, and the words are in your hand before the next one.</p>
+
+    <!-- SUB‑HEADLINE -->
+    <p class="subheadline">Fill in your details below and the kit is in your inbox in under a minute. Print it tonight, keep it on the fridge, in the car, in your bag.</p>
+
+    <!-- IMAGE SLOT -->
+    <div style="text-align:center;margin-bottom:2rem;">
+        <img src="/assets/brand/mockups/calm_kit_updated_tablet.jpg" alt="Mid‑Storm Kit mock‑up: phone screen showing 27‑phrase page, fridge poster beside it" class="product-img">
+    </div>
+
+    <!-- BENEFIT BLOCK -->
+    <section class="benefit">
+        <p><strong>You know the storm is coming.</strong> Bag on the floor, the wrong cup, the shoes. In that moment every sentence you reach for makes it worse.</p>
+        <p>The Mid‑Storm Kit gives you the exact words for each phase, so you are never standing there searching:</p>
+        <ul>
+            <li>► <strong>The rumble:</strong> six phrases that lower the demand before it tips (because “calm down” is the phrase that tips it)</li>
+            <li>► <strong>The storm:</strong> five phrases for when reasoning is gone, including a two‑word version for a child who has no words left</li>
+            <li>► <strong>The landing:</strong> five phrases that reconnect before any review (the review is what restarts it)</li>
+            <li>► <strong>The car &amp; the supermarket:</strong> four phrases, one for your child and three for the stranger who sighs</li>
+            <li>► <strong>Bedtime:</strong> four phrases for the night the day’s holding‑together runs out</li>
+            <li>► <strong>The repair:</strong> three phrases for tomorrow, side by side, five minutes</li>
+            <li>► <strong>The 9 never‑say lines:</strong> and why each one backfires, so you stop saying the ones you were taught</li>
+        </ul>
+        <p>Plus the whole Calm Kit toolset as bonuses: the six cards, the fridge poster, the car protocol, the calm corner, the sibling card, the 90‑second reset, the bedtime script and the repair guide. Twelve bonuses, listed below the button.</p>
+        <p>It is not a tantrum and you are not failing. It is a nervous‑system out of capacity, and these are the words that meet it. Fewer storms, shorter storms. Not zero. Nobody honest promises zero.</p>
+    </section>
+
+    <!-- CHECKOUT FORM -->
+    <form id="checkout" action="#" method="POST" style="max-width:480px;margin:0 auto;">
+        <input type="text" name="full_name" placeholder="Full name" required style="width:100%;padding:0.75rem;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
+        <input type="email" name="email" placeholder="Email address" required style="width:100%;padding:0.75rem;margin-bottom:15px;border:1px solid #ccc;border-radius:4px;">
+        <!-- SamCart injects payment UI here -->
+        <button type="submit" class="cta-btn">Send me the kit</button>
+    </form>
+    <p class="trust-line">Secure payment. Instant delivery by email. 30‑day refund, no questions, write to <a href="mailto:admin@zylakids.com">admin@zylakids.com</a>.</p>
+
+    <!-- ORDER SUMMARY LIST -->
+    <h2>Everything in The Mid‑Storm Kit:</h2>
+    <ul>
+        <li>► The 27 Things to Say, grouped by moment</li>
+        <li>► The 9 Never‑Say Lines, with why</li>
+        <li>► The one‑page How to Use It</li>
+        <li>► Bonus 1: The Age Translations (pre‑verbal &amp; AAC, 3‑7, 8‑12, teens)</li>
+        <li>► Bonus 2: The Six Calm‑Down Cards</li>
+        <li>► Bonus 3: The Fridge Poster</li>
+        <li>► Bonus 4: The Trigger Audit</li>
+        <li>► Bonus 5: The Public Moment Cards</li>
+        <li>► Bonus 6: The Car Protocol</li>
+        <li>► Bonus 7: The Calm Corner Blueprint</li>
+        <li>► Bonus 8: The Sibling Mid‑Storm Card</li>
+        <li>► Bonus 9: The 90‑Second Parent Reset</li>
+        <li>► Bonus 10: The Bedtime Storm Script</li>
+        <li>► Bonus 11: The Repair Guide</li>
+        <li>► Bonus 12: The One‑Page Master Sheet</li>
+    </ul>
+
+    <!-- ORDER BUMPS -->
+    <section class="bump">
+        <h3>Add a bonus while you checkout</h3>
+        <label><input type="checkbox" name="bump1" value="Explain My Child Library"> <strong>The Explain My Child Library</strong> – $17</label><br><br>
+        <label><input type="checkbox" name="bump2" value="Low‑Demand Phrasebook"> <strong>The Low‑Demand Phrasebook</strong> – $37<br>
+        <span style="font-size:0.9rem;color:var(--text-muted);">The Mid‑Storm Kit works without it. The battles shrink faster with it.</span></label>
+    </section>
+
+    <!-- UPSELLS -->
+    <section class="upsell">
+        <h3>Whole House Pack</h3>
+        <p>The Mid‑Storm Kit is in your hand. This puts it on your walls.</p>
+        <p><a href="#" class="cta-btn">Yes – give me the Whole House Pack</a></p>
+        <p style="text-align:center;margin-top:10px;"><a href="#" style="color:var(--text-muted);text-decoration:underline;">No thanks, take me to my Mid‑Storm Kit</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>The Mid‑Storm Kit provides educational and organizational tools only and is not medical, psychological, or therapeutic advice.</p>
+        <p>Refund policy • Privacy policy • Terms • Support: <a href="mailto:admin@zylakids.com">admin@zylakids.com</a></p>
+        <p>Sold by Alletta LLC, 6114 La Salle Ave, STE 477, Oakland, CA 94611.</p>
+        <p>© 2026 Mid‑Storm. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+</html>
