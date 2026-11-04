@@ -27,6 +27,7 @@ import {
 import {
   HERO_PROFILE,
   FUNNEL_PORTFOLIO_URL,
+  CLIENT_GROWTH_PILLARS,
   STATIC_AD_CREATIVES,
   REEL_SHOWCASE,
   FUNNEL_STEPS,
@@ -53,6 +54,7 @@ const Hero3DStage = dynamic(() => import("@/components/three/Hero3DStage"), {
 });
 
 const NAV_LINKS = [
+  { href: "#why-brands-stall", label: "Why Brands Stall" },
   { href: "#reels", label: "Video Ads" },
   { href: "#static-ads", label: "Static Ads" },
   { href: "#funnels", label: "Funnels" },
@@ -153,8 +155,8 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-[#FAFAFA] text-zinc-950 bg-grid-minimal">
       {/* Top Minimalist Floating Pill Navigation */}
       <header className="sticky top-0 z-50 pt-4 pb-2 px-4 sm:px-6 lg:px-8 pointer-events-none">
-        <div className="max-w-6xl mx-auto">
-          <div className="pointer-events-auto h-14 px-3 sm:px-4 rounded-full bg-white/85 backdrop-blur-xl border border-zinc-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto space-y-2">
+          <div className="pointer-events-auto h-14 px-3 sm:px-4 rounded-full bg-white/90 backdrop-blur-xl border border-zinc-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-between gap-4">
             {/* Brand Identity */}
             <a
               href="#"
@@ -170,13 +172,13 @@ export default function PortfolioPage() {
               </span>
             </a>
 
-            {/* Center Navigation Pills */}
+            {/* Center Navigation Pills (Desktop) */}
             <nav className="hidden lg:flex items-center gap-1 bg-zinc-100/80 p-1 rounded-full border border-zinc-200/60">
               {NAV_LINKS.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="px-3.5 py-1.5 rounded-full text-xs font-medium text-zinc-600 hover:text-zinc-950 hover:bg-white hover:shadow-sm transition-all whitespace-nowrap"
+                  className="px-3 py-1.5 rounded-full text-xs font-medium text-zinc-600 hover:text-zinc-950 hover:bg-white hover:shadow-sm transition-all whitespace-nowrap"
                 >
                   {item.label}
                 </a>
@@ -190,10 +192,23 @@ export default function PortfolioPage() {
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 bg-zinc-950 text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-zinc-800 transition-colors whitespace-nowrap shadow-sm"
             >
-              <span>Funnelish Portfolio</span>
+              <span>100+ Funnels</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
+
+          {/* Mobile Horizontally Scrollable Pill Bar */}
+          <nav className="lg:hidden pointer-events-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar bg-white/90 backdrop-blur-xl border border-zinc-200/80 px-2.5 py-1.5 rounded-full shadow-sm">
+            {NAV_LINKS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="px-3 py-1 rounded-full text-[11px] font-medium text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100 transition-colors whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </header>
 
@@ -241,14 +256,14 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            {/* Direct CTA to Funnelish & Web Development Portfolio + Media Buying Jump */}
+            {/* Direct CTA to Pre-Frame Listicle & Funnelish Portfolio */}
             <div className="pt-3 flex flex-wrap items-center gap-3">
               <a
-                href="#reels"
+                href="#why-brands-stall"
                 className="inline-flex items-center gap-2 bg-zinc-950 text-white px-5 py-3 rounded-xl text-xs font-mono hover:bg-zinc-800 transition-colors shadow-sm"
               >
-                <Play className="w-3.5 h-3.5" />
-                <span>Explore Video Ads & Media Buying</span>
+                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Read: 4 Reasons Your Ad Account Is Stalling ↓</span>
               </a>
               <a
                 href={FUNNEL_PORTFOLIO_URL}
@@ -256,7 +271,7 @@ export default function PortfolioPage() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-white hover:bg-zinc-950 hover:text-white text-zinc-900 border border-zinc-300 px-5 py-3 rounded-xl text-xs font-mono transition-colors"
               >
-                <span>View 100+ Funnelish Builds (markangelobautista.framer.website)</span>
+                <span>View 100+ Funnelish & Shopify Builds</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -283,6 +298,93 @@ export default function PortfolioPage() {
               detail={m.detail}
             />
           ))}
+        </div>
+      </section>
+
+      {/* =========================================================
+          00. DIRECT-RESPONSE PRE-SELL LISTICLE (CLIENT CONVERSION)
+      ========================================================= */}
+      <section
+        id="why-brands-stall"
+        className="py-24 bg-zinc-950 text-white bg-grid-dark border-t border-zinc-800"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
+              <span>THE FULL-STACK ACQUISITION ADVANTAGE</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight leading-[1.12] text-white mb-4">
+              4 Reasons Most DTC Brands Bleed Margin on Meta — And How I Fix All 4 Under One Roof.
+            </h2>
+            <p className="text-base text-zinc-300 leading-relaxed">
+              When you split media buying, ad creative, and funnel building across three disconnected freelancers, everyone blames each other when ROAS drops. Here is how I engineer the entire click-to-upsell system so every dollar of ad spend works harder:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {CLIENT_GROWTH_PILLARS.map((pillar) => (
+              <div
+                key={pillar.num}
+                className="bg-zinc-900/90 border border-zinc-800 hover:border-zinc-600 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-colors"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-white text-zinc-950">
+                      {pillar.num}
+                    </span>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">
+                      {pillar.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 leading-snug">
+                    {pillar.title}
+                  </h3>
+
+                  {/* The Trap & Agitation */}
+                  <div className="bg-rose-950/30 border border-rose-500/25 rounded-2xl p-4 mb-4 space-y-1.5">
+                    <p className="text-xs font-semibold text-rose-300">
+                      {pillar.trap}
+                    </p>
+                    <p className="text-xs text-zinc-300 leading-relaxed">
+                      {pillar.agitate}
+                    </p>
+                  </div>
+
+                  {/* The Unfair Advantage */}
+                  <div className="bg-emerald-950/25 border border-emerald-500/25 rounded-2xl p-4 mb-5">
+                    <p className="text-xs text-emerald-200 leading-relaxed font-medium">
+                      {pillar.unfairAdvantage}
+                    </p>
+                  </div>
+
+                  <div className="space-y-2 mb-6">
+                    {pillar.proofPoints.map((pt) => (
+                      <div
+                        key={pt}
+                        className="flex items-start gap-2.5 text-xs text-zinc-300 leading-relaxed"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-none mt-0.5" />
+                        <span>{pt}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                  <a
+                    href={pillar.jumpHref}
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:text-emerald-400 transition-colors"
+                  >
+                    <span>{pillar.jumpLabel}</span>
+                  </a>
+                  <span className="text-[11px] font-mono text-zinc-500">
+                    PROVEN IN PRODUCTION
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -674,7 +776,7 @@ export default function PortfolioPage() {
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white text-zinc-950 font-mono text-xs font-semibold px-6 py-4 rounded-2xl hover:bg-zinc-200 transition-colors flex-none"
           >
-            <span>Open markangelobautista.framer.website</span>
+            <span>Explore Full Funnel Portfolio</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
@@ -765,7 +867,7 @@ export default function PortfolioPage() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-zinc-950 text-white text-xs font-mono py-3 px-5 rounded-xl hover:bg-zinc-800 transition-colors"
               >
-                <span>View Live Funnelish & Shopify Builds at markangelobautista.framer.website</span>
+                <span>Explore All 100+ Funnelish & Shopify Builds</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -867,17 +969,17 @@ export default function PortfolioPage() {
             <div className="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6">
               <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 mb-3">
                 <ShieldCheck className="w-4 h-4" />
-                <span>5-POINT FUNNEL CHECK</span>
+                <span>5-POINT FUNNEL & PIXEL QA</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">
-                Weekly Tracking & Checkout QA
+                Pre-Launch Attribution & Checkout Audit
               </h3>
               <ul className="space-y-2 text-xs text-zinc-300 font-mono">
-                <li>1. Test live ad links to `buy.zylakids.com`</li>
-                <li>2. Run test checkout on SamCart payment form</li>
-                <li>3. Verify Meta Pixel PageView, Checkout & Purchase</li>
-                <li>4. Check UTM tags across all 5 social accounts</li>
-                <li>5. Confirm SamCart purchases tag buyers in Kit</li>
+                <li>1. Audit live ad destination URLs & redirect speed</li>
+                <li>2. Test payment gateway, order bumps & 1-click upsells</li>
+                <li>3. Verify Meta Pixel & CAPI (PageView, Checkout, Purchase)</li>
+                <li>4. Validate dynamic UTM parameters across all placements</li>
+                <li>5. Confirm post-purchase webhook tags in ESP / CRM</li>
               </ul>
             </div>
 
@@ -1076,22 +1178,57 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Minimalist Footer */}
-      <footer className="bg-zinc-950 text-zinc-400 py-12 border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
-          <div>
-            <span className="text-white font-semibold">{HERO_PROFILE.name}</span> —
-            Media Buyer, Creative Strategist & Funnel Builder
+      {/* High-Converting Closing CTA + Minimalist Footer */}
+      <footer className="bg-zinc-950 text-zinc-400 pt-20 pb-14 border-t border-zinc-800 bg-grid-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-zinc-900/90 border border-zinc-800 rounded-3xl p-8 sm:p-12 mb-12 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>AVAILABLE FOR DTC BRANDS & AGENCIES</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+                Ready to Replace Disconnected Freelancers With One Full-Stack Acquisition System?
+              </h2>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Whether you need hook-first video ads, multi-placement static testing, or high-AOV Funnelish & Shopify listicles and checkouts, let&apos;s build your next winning funnel.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 flex-none">
+              <a
+                href={FUNNEL_PORTFOLIO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-zinc-950 font-mono text-xs font-semibold px-6 py-4 rounded-2xl hover:bg-zinc-200 transition-colors"
+              >
+                <span>Explore 100+ Funnelish & Shopify Builds</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={FUNNEL_PORTFOLIO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="text-white hover:underline transition-colors"
-            >
-              Funnelish Portfolio (markangelobautista.framer.website) ↗
-            </a>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono pt-6 border-t border-zinc-800/80">
+            <div className="flex items-center gap-3">
+              <img
+                src="/favicon.png"
+                alt={HERO_PROFILE.name}
+                className="w-6 h-6 rounded-full object-cover"
+              />
+              <span>
+                <strong className="text-white">{HERO_PROFILE.name}</strong> — Direct-Response Media Buyer, Creative Strategist & Funnel Architect
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-5">
+              <a
+                href={FUNNEL_PORTFOLIO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-zinc-300 hover:text-white transition-colors"
+              >
+                Funnelish & Shopify Portfolio ↗
+              </a>
+            </div>
           </div>
         </div>
       </footer>

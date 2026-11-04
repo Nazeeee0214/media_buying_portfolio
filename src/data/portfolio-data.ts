@@ -81,19 +81,94 @@ export interface LoopScript {
 
 export const HERO_PROFILE = {
   name: "Mark Angelo Bautista",
-  role: "Media Buyer, Creative Strategist & Funnel Builder",
-  location: "Paid Media Buying · Short-Form Ad Creative · Funnelish & Shopify",
-  headline: "Scaling DTC brands with hook-first video ads, Meta media buying, and high-converting sales funnels.",
+  role: "Direct-Response Media Buyer, Creative Strategist & Funnel Architect",
+  location: "Meta Media Buying · Hook-First Ad Creative · 100+ Funnelish & Shopify Builds",
+  headline: "Why Most DTC Ad Accounts Burn Cash — And The 5-Part System That Turns Cold Clicks Into 3.0x+ ROAS.",
   subheadline:
-    "Media buyer and creative strategist with a software engineering background. I plan and scale Meta ad campaigns, build hook-first video ads that lifted top-of-funnel reach 14x, and have developed 100+ sales funnels and advertorials across Funnelish and Shopify.",
+    "If you hire a media buyer who only pushes buttons in Ads Manager, a video editor who doesn't understand unit economics, and a developer who doesn't know direct-response psychology, your CAC will always eat your margin. I handle all three under one roof: scroll-stopping video ads, disciplined Meta scaling, and 100+ high-AOV Funnelish & Shopify builds.",
   funnelPortfolioUrl: "https://markangelobautista.framer.website",
   metrics: [
-    { value: 3.0, suffix: "x", decimals: 1, label: "Winner Ad Set ROAS", detail: "Meta Reels Cold Traffic Winner" },
-    { value: 14, suffix: "x", decimals: 0, label: "Organic Reach Lift", detail: "Hook-First Short-Form Video Cuts" },
+    { value: 3.0, suffix: "x", decimals: 1, label: "Winner Ad Set ROAS", detail: "Meta Reels Cold Traffic Acquisition" },
+    { value: 14, suffix: "x", decimals: 0, label: "Top-of-Funnel Reach Lift", detail: "Hook-First Short-Form Video Cuts" },
     { value: 100, suffix: "+", decimals: 0, label: "Funnels & Advertorials", detail: "Funnelish · Shopify · Custom Builds" },
-    { value: 28, suffix: "+", decimals: 0, label: "Ad Creatives Produced", detail: "Multi-Format Static & Video Suites" },
+    { value: 17.5, suffix: "x", decimals: 1, label: "Max Cart Expansion", detail: "$27 Front-End → $475 Full Funnel" },
   ],
 };
+
+export interface GrowthPillar {
+  num: string;
+  tag: string;
+  title: string;
+  trap: string;
+  agitate: string;
+  unfairAdvantage: string;
+  proofPoints: string[];
+  jumpHref: string;
+  jumpLabel: string;
+}
+
+export const CLIENT_GROWTH_PILLARS: GrowthPillar[] = [
+  {
+    num: "REASON #1",
+    tag: "THE 2-SECOND SCROLL TAX",
+    title: "Your Media Buying Isn't Broken—Your First 1.8 Seconds Are.",
+    trap: "The Trap: Most brands pay agencies thousands to tweak audiences while running slow, generic ads that lose 82% of viewers before the 2-second mark.",
+    agitate: "In post-Andromeda Meta Ads, the creative IS the targeting. If your opening frame doesn't call out a visceral daily flashpoint immediately, you're paying a 'boring ad tax' on every thousand impressions.",
+    unfairAdvantage: "Your Unfair Advantage: I build hook-first declarative video reels and code-driven React/Remotion ads where we can swap opening hooks and final 2-second CTAs in minutes—not weeks.",
+    proofPoints: [
+      "14x organic & top-of-funnel reach lift by replacing slow intros with 0.0s flashpoint hooks",
+      "8-second seamless loop reels engineered to force 2x watches (>100% completion)",
+      "Modular end-cards that route traffic to Paid Checkouts, ManyChat DMs, or Lead Magnets",
+    ],
+    jumpHref: "#reels",
+    jumpLabel: "See The Hook-First Video Lab ↓",
+  },
+  {
+    num: "REASON #2",
+    tag: "THE SINGLE-PLACEMENT BOTTLENECK",
+    title: "Testing One Ad Format Starves Meta's Algorithm of Cheap Inventory.",
+    trap: "The Trap: Launching a single 1:1 image or a single video and hoping Meta finds buyers across Feed, Stories, and Reels.",
+    agitate: "When you only give Meta one aspect ratio or one emotional angle, you force the auction into overcrowded placements and burn out your winning creative in days.",
+    unfairAdvantage: "Your Unfair Advantage: Every angle I research in the Meta Ad Library is deployed as a full multi-placement static & video matrix (4:5 Feed, 1:1 Square, 9:16 Story) plus high-value product stack mockups.",
+    proofPoints: [
+      "4 distinct psychological angles tested simultaneously (Pain, Mechanism, Pattern, Identity)",
+      "Tangible 'print-tonight' bundle mockups that make digital & physical offers irresistible",
+      "Reverse-engineered from competitor ads proven to run profitably for 5–10+ months",
+    ],
+    jumpHref: "#static-ads",
+    jumpLabel: "Inspect The 28-Ad Static Matrix ↓",
+  },
+  {
+    num: "REASON #3",
+    tag: "THE $27 FRONT-END DEATH SPIRAL",
+    title: "You Can't Scale Cold Traffic If Your Funnel Stops at the First Purchase.",
+    trap: "The Trap: Sending expensive Meta clicks to a standard product page where a $27 buyer checks out and leaves with a $27 cart.",
+    agitate: "At a $27 AOV, rising CPMs will eventually crush your ROAS. The brands scaling effortlessly on Meta aren't paying less for clicks—they're making 2x to 5x more per customer at checkout.",
+    unfairAdvantage: "Your Unfair Advantage: With 100+ Funnelish and Shopify funnels built, I engineer pre-sell listicles, dual one-checkbox order bumps (+$17 & +$37), and one-click upsells ($97 & $297) that turn a $27 front-end buyer into a $64–$475 cart.",
+    proofPoints: [
+      "100+ high-converting Funnelish & Shopify advertorials, listicles, and checkouts shipped",
+      "Dual impulse order bumps that more than double initial front-end cart value ($27 → $64+)",
+      "Zero-friction one-click post-purchase upsells that expand maximum cart value to $475",
+    ],
+    jumpHref: "#funnels",
+    jumpLabel: "See The $27 → $475 Funnel Ladder ↓",
+  },
+  {
+    num: "REASON #4",
+    tag: "EMOTIONAL MEDIA BUYING & LEAKY PIXELS",
+    title: "Scaling on 'Gut Feel' Instead of Strict Kill / Hold / +30% Rules.",
+    trap: "The Trap: Letting losing ad sets bleed budget because 'the algorithm needs more time', or scaling winners too fast and resetting learning.",
+    agitate: "Combine emotional budget changes with unverified Pixel/CAPI events and zero cart-recovery flows, and you're flying blind while leaking 20–30% of warm checkouts.",
+    unfairAdvantage: "Your Unfair Advantage: I run ad accounts like a software engineer—strict CPA/ROAS kill gates, disciplined +30% vertical scaling on 3.0x ROAS winners, automated ManyChat/email recovery, and custom Python scripts for daily reporting.",
+    proofPoints: [
+      "Rule-based scaling: +30% budget increases only when ad sets clear ROAS & AOV gates",
+      "Automated ManyChat ('Comment Keyword') DM capture + 3-email abandoned cart recovery",
+      "Custom Python automation for Meta CSV reporting & Playwright Ad Library scraping",
+    ],
+    jumpHref: "#war-room",
+    jumpLabel: "Explore The Media Buying System ↓",
+  },
+];
 
 export const FUNNEL_PORTFOLIO_URL = "https://markangelobautista.framer.website";
 
@@ -246,7 +321,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-batch2-lunchtime",
     title: "Reel 1: The Lunchbox Standoff (Winner Ad)",
-    brand: "Zyla Kids · Batch 2 Paid Winner (3.0x ROAS)",
+    brand: "Paid Acquisition Winner · 3.0x ROAS",
     category: "Paid Meta Reel",
     videoSrc: "/assets/videos/batch2_reel1_lunchtime.mp4",
     posterSrc: "/assets/stills/batch2_reel1_poster.png",
@@ -265,7 +340,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-batch2-school-incident",
     title: "Reel 2: The School Incident (Chain of Triggers)",
-    brand: "Zyla Kids · Batch 2 Flexible Campaign",
+    brand: "DCT Hook Testing · Broad US 25–55",
     category: "Paid Meta Reel",
     videoSrc: "/assets/videos/batch2_reel2_school_incident.mp4",
     posterSrc: "/assets/stills/batch2_reel2_poster.png",
@@ -287,7 +362,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-batch2-fine-at-school",
     title: "Reel 3: Fine at School (After-School Collapse)",
-    brand: "Zyla Kids · Batch 2 Flexible Campaign",
+    brand: "DCT Hook Testing · Broad US 25–55",
     category: "Paid Meta Reel",
     videoSrc: "/assets/videos/batch2_reel3_fine_at_school.mp4",
     posterSrc: "/assets/stills/batch2_reel3_poster.png",
@@ -309,7 +384,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-batch2-assessment",
     title: "Reel 4: Private Assessment (No Diagnosis Needed)",
-    brand: "Zyla Kids · Batch 2 Flexible Campaign",
+    brand: "DCT Hook Testing · Broad US 25–55",
     category: "Paid Meta Reel",
     videoSrc: "/assets/videos/batch2_reel4_private_assessment.mp4",
     posterSrc: "/assets/stills/batch2_reel4_poster.png",
@@ -331,7 +406,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-remotion-27",
     title: "27 Things to Say Mid-Meltdown (Remotion Build)",
-    brand: "Zyla Kids · Programmatic React Video",
+    brand: "Programmatic React + Remotion Engine",
     category: "Remotion Video",
     videoSrc: "/assets/videos/reel_01_27_things_to_say.mp4",
     posterSrc: "/assets/stills/v2_beat1_hook.png",
@@ -353,7 +428,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-style-ref",
     title: "Brand Storybook Reel (Hook → Lesson → CTA)",
-    brand: "Zyla Kids · Brand Kit Reference",
+    brand: "Visual System & Typography Alignment",
     category: "Remotion Video",
     videoSrc: "/assets/videos/example_reel_storybook.mp4",
     posterSrc: "/assets/brand/mockups/reel_frames_hook_lesson_cta.jpg",
@@ -372,7 +447,7 @@ export const REEL_SHOWCASE: ReelItem[] = [
   {
     id: "reel-ambient-loop",
     title: "8-Second Seamless B-Roll Loop",
-    brand: "Zyla Kids · Organic Loop Format",
+    brand: "High-Retention Organic Loop Format",
     category: "Organic Loop",
     videoSrc: "/assets/videos/bg_looped.mp4",
     posterSrc: "/assets/stills/v2_beat5_neversay.png",
@@ -566,7 +641,7 @@ export const CAMPAIGN_RECORDS: CampaignRecord[] = [
   },
   {
     id: "camp-batch1-statics",
-    name: "Batch 1 Static Testing — 4-Angle Multi-Placement Suite",
+    name: "Multi-Placement Static Control Suite (4 Angles)",
     platform: "Meta Ads (Feed + Stories)",
     format: "4:5, 1:1 & 9:16 Statics",
     targeting: "Broad US 25–55",
